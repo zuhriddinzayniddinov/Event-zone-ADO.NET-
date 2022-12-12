@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C#\\4-modul\\6-dars\\6-dars.csproj": {}
+    "c:\\C#\\4-modul\\6-dars\\6-dars.csproj": {}
   },
   "projects": {
-    "C:\\C#\\4-modul\\6-dars\\6-dars.csproj": {
+    "c:\\C#\\4-modul\\6-dars\\6-dars.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#\\4-modul\\6-dars\\6-dars.csproj",
+        "projectUniqueName": "c:\\C#\\4-modul\\6-dars\\6-dars.csproj",
         "projectName": "6-dars",
-        "projectPath": "C:\\C#\\4-modul\\6-dars\\6-dars.csproj",
+        "projectPath": "c:\\C#\\4-modul\\6-dars\\6-dars.csproj",
         "packagesPath": "C:\\Users\\zayni\\.nuget\\packages\\",
-        "outputPath": "C:\\C#\\4-modul\\6-dars\\obj\\",
+        "outputPath": "c:\\C#\\4-modul\\6-dars\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zayni\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
