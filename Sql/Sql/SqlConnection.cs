@@ -1,16 +1,38 @@
 using System;
 using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 class SqlConnection : ISqlConnection
 {
   public string Database { get; } = @"Server=DESKTOP-6661VFP; Database=MessengerProg; Trusted_Connection=True; MultipleActiveResultSets=true;";
   public void BrounRoom(User user, Order order)
   {
-    throw new NotImplementedException();
+    using (var connection = new SqlConnection(Database))
+    {
+      string query = 
+          $"EXECUTE [CreateOrders] {user.Id},'{order.StartTime}','{order.FinishTime}',{order.RoomId},'{order.EventName}'";
+
+      SqlCommand command = new SqlCommand(query, connection);
+
+      connection.Open();
+
+      SqlDataReader dataReader = command.ExecuteReader();
+    }
   }
 
   public void BrounRoomPlace(int EventId, User user)
   {
-    
+    using (var connection = new SqlConnection(Database))
+    {
+      // hali chala
+      string query = 
+          $"";
+
+      SqlCommand command = new SqlCommand(query, connection);
+
+      connection.Open();
+
+      SqlDataReader dataReader = command.ExecuteReader();
+    }
   }
 
   public void CreateRoom(Room room)
@@ -58,7 +80,31 @@ class SqlConnection : ISqlConnection
 
   public List<Order> GetEvents()
   {
-    throw new NotImplementedException();
+    using (var connection = new SqlConnection(Database))
+    {
+      string query = 
+          $"EXECUTE [GetOrders] N'{DateTime.Now}'";
+
+      SqlCommand command = new SqlCommand(query, connection);
+
+      connection.Open();
+
+      SqlDataReader dataReader = command.ExecuteReader();
+      List<Order> orders = new List<Order>();
+      while (dataReader.Read())
+      {
+        orders.Add(new Order
+        {
+            RoomName = (string)dataReader["RoomName"],
+            UserName = (string)dataReader["FirstName"],
+            StartTime = (DateTime)dataReader["StartTime"],
+            EventName = (string)dataReader["EventName"]
+
+        });
+      }
+      return orders;
+    }
+
   }
 
   public List<Room> GetRoom()

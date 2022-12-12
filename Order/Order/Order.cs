@@ -5,4 +5,6 @@ class Order : IOrder
   public int RoomId { get ; set ; }
   public string EventName { get ; set ; }
   public int Status { get ; set ; }
+  public string UserName { get ; set; }
+  public string RoomName { get; set; }
 }

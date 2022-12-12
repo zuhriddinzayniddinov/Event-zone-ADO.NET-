@@ -3431,6 +3431,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.Data.SqlClient >= 5.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "System.Data.SqlClient >= 4.8.5"
     ]
@@ -3441,11 +3442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\C#\\4-modul\\6-dars\\6-dars.csproj",
+      "projectUniqueName": "C:\\C#\\4-modul\\6-dars\\6-dars.csproj",
       "projectName": "6-dars",
-      "projectPath": "c:\\C#\\4-modul\\6-dars\\6-dars.csproj",
+      "projectPath": "C:\\C#\\4-modul\\6-dars\\6-dars.csproj",
       "packagesPath": "C:\\Users\\zayni\\.nuget\\packages\\",
-      "outputPath": "c:\\C#\\4-modul\\6-dars\\obj\\",
+      "outputPath": "C:\\C#\\4-modul\\6-dars\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zayni\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3472,6 +3473,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.Data.SqlClient": {
+            "target": "Package",
+            "version": "[5.0.1, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[7.0.0, )"
