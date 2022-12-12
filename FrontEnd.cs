@@ -2,7 +2,7 @@ class FrontEnd : IFrontEnd
 {
   public FrontEnd()
   {
-    this.HeadMenu = new string[]{" 1.SignUp "," 2.SignIn ", " 3.Exit "};
+    this.HeadMenus = new string[]{" 1.SignUp "," 2.SignIn ", " 3.Exit "};
     this.SingIn = new string[]{" PhoneNumber: "," Password: "};
     this.SingUp = new string[]{" FirstName: "," LastName: "," PhoneNumber: "," Password: "};
     this.CreateOrders = new string[]{" Start Time: "," Finish Time: "," Room number: "," Event of name: "};
@@ -11,7 +11,7 @@ class FrontEnd : IFrontEnd
     this.AdminEssigns = new string[]{" User number: "};
   }
 
-  public string[] HeadMenu { get; set; }
+  public string[] HeadMenus { get; set; }
   public string[] SingUp { get; set; }
   public string[] SingIn { get; set; }
   public string[] CreateOrders { get; set; }
@@ -19,14 +19,18 @@ class FrontEnd : IFrontEnd
   public string[] EventEssigns { get; set; }
   public string[] AdminEssigns { get; set; }
 
+  public void HeadMenu()
+  {
+
+  }
   public void AdminEssign()
   {
     
   }
 
-  public void CreateAccaunt()
+  public User CreateAccaunt()
   {
-    
+    return null;
   }
 
   public void CreateOrder()
@@ -39,9 +43,9 @@ class FrontEnd : IFrontEnd
     
   }
 
-  public void GetAccaunt()
+  public User GetAccaunt()
   {
-    
+    return null;
   }
 
   public void GetEvents()
